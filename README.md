@@ -57,7 +57,7 @@ The backend uses `uv` for ultra-fast Python package management.
 1.  Clone Repository
     ```bash
     git clone https://github.com/ayushjy/ip_checker.git
-    cd YOUR_REPO_NAME
+    cd ip_checker
     ```
 
 2.  Setup Backend Environment
