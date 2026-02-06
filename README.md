@@ -56,7 +56,7 @@ The backend uses `uv` for ultra-fast Python package management.
 
 1.  Clone Repository
     ```bash
-    git clone https://github.com/ayushjy/weather-pr.git
+    git clone https://github.com/ayushjy/ip_checker.git
     cd YOUR_REPO_NAME
     ```
 
