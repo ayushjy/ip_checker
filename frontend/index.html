@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IP Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>IP Information Viewer</h2>
+
+<input id="ip" placeholder="Enter IP">
+<button onclick="check()">Check</button>
+
+<div id="output"></div>
+
+<script>
+async function check(){
+
+    const ip = document.getElementById("ip").value
+
+    const res = await fetch(
+        `http://127.0.0.1:5000/check-ip?ip=${ip}`
+    )
+
+    const data = await res.json()
+
+    let html = ""
+
+    for (let key in data){
+        html += `<div class="row">
+                    <span class="key">${key}</span>
+                    <span class="val">${data[key]}</span>
+                 </div>`
+    }
+
+    document.getElementById("output").innerHTML = html
+}
+</script>
+
+</body>
+</html>
